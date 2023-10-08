@@ -14,7 +14,7 @@ namespace _001_Euclid
             int x = int.Parse(Console.ReadLine());
             Console.Write("N2: ");
             int y = int.Parse(Console.ReadLine());
-            
+
 
             watch = Stopwatch.StartNew();
             int rGCD = rEuclid(x, y);
@@ -29,7 +29,6 @@ namespace _001_Euclid
             Console.WriteLine("\nloop : " + lGCD);
             WriteTimer(lGCD, watch);
         }
-
 
         //reculsive
         private static int rEuclid(int x, int y)

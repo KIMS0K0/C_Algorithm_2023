@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004_Hanoi", "004_Hanoi\004_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_SortGraph", "005_SortGraph\005_SortGraph.csproj", "{EE7ACB29-501C-4A18-BBAF-87AC7F147832}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006_ClosestPair", "006_ClosestPair\006_ClosestPair.csproj", "{ED36DFE7-D8C8-4E12-B5F6-AE3CCD9276F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EE7ACB29-501C-4A18-BBAF-87AC7F147832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE7ACB29-501C-4A18-BBAF-87AC7F147832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE7ACB29-501C-4A18-BBAF-87AC7F147832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED36DFE7-D8C8-4E12-B5F6-AE3CCD9276F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED36DFE7-D8C8-4E12-B5F6-AE3CCD9276F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED36DFE7-D8C8-4E12-B5F6-AE3CCD9276F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED36DFE7-D8C8-4E12-B5F6-AE3CCD9276F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

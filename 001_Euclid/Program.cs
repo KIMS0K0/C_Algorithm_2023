@@ -7,21 +7,16 @@ namespace _001_Euclid
     {
         static void Main(string[] args)
         {
-            var watch = Stopwatch.StartNew();
-            var elapsedTicks = watch.ElapsedTicks;
-
             Console.Write("N1: ");
             int x = int.Parse(Console.ReadLine());
             Console.Write("N2: ");
             int y = int.Parse(Console.ReadLine());
 
-
-            watch = Stopwatch.StartNew();
+            var watch = Stopwatch.StartNew();
             int rGCD = rEuclid(x, y);
             watch.Stop();
             Console.WriteLine("\nreculsive : " + rGCD);
             WriteTimer(rGCD, watch);
-
 
             watch = Stopwatch.StartNew();
             int lGCD = lEuclid(x, y);

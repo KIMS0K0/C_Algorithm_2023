@@ -75,15 +75,6 @@ namespace _006_ClosestPair
         }
         private void HighLight(PointPair result)
         {
-            //Line l = new Line();
-            //l.X1 = result.P1.X-1;
-            //l.Y1 = result.P1.Y;
-            //l.X2 = result.P2.X+1;
-            //l.Y2 = result.P2.Y;
-            //l.Stroke = Brushes.Red;
-            //l.StrokeThickness = 5;
-            //can.Children.Add(l);
-
             // 사각형으로 두 점을 둘러싸도록 그린다
             int size = 12;
             Rectangle r = new Rectangle();
@@ -219,6 +210,7 @@ namespace _006_ClosestPair
             for (int i = mid; i >= 0; i--)
                 if (points[mid].X - points[i].X > d)
                 {
+                    Console.WriteLine(mid +"" + i);
                     left = i;
                     break;
                 }
@@ -226,6 +218,7 @@ namespace _006_ClosestPair
             for (int i = mid; i < points.Length; i++)
                 if (points[i].X - points[mid].X > d)
                 {
+                    Console.WriteLine(mid + "" + i);
                     right = i;
                     break;
                 }

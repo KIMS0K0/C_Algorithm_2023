@@ -29,7 +29,7 @@ namespace _003_Fibonacci
 
         private static int lFibonacci(int x)
         {
-            int a = 0; int b = 0; int c = 1;
+            int a = 0, b = 0, c = 1;
             for (int i = 1; i<x;i++)
             {
                 a = b;

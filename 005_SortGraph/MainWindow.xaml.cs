@@ -135,7 +135,6 @@ namespace _005_SortGraph
         /// <summary>
         /// ////////////////////////////////////////////////////////////////////////////
         /// </summary>
-        '
 
 
         private void btnTime_Click(object sender, RoutedEventArgs e)

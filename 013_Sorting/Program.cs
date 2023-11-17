@@ -47,7 +47,13 @@ namespace _013_Sorting
 
             RandomInit();
             HeapSort();
+
+            Console.WriteLine(":: RadixSort");
+
+            RandomInit();
+            RadixSort();
         }
+
         private static void PrintArray()
         {
             foreach (var i in a)
@@ -165,6 +171,63 @@ namespace _013_Sorting
                 Swap(i, largest);
                 DownHeap(a, n, largest);
             }
+        }
+        private static void RadixSort()
+        {
+            int max = GetMax();
+            PrintArray();
+
+            // 자리수에 따라 CountingSort()를 호출
+            for (int exp = 1; max / exp > 0; exp *= 10)
+                CountingSort(a, exp);
+        }
+        private static void CountingSort(int[] a, int exp)
+        {
+            
+            int[] count = new int[10];
+            int[] output = new int[N]; // 중간과정에서 값을 저장하는 배열
+
+            for (int i = 0; i < N; i++)
+                count[(a[i] / exp) % 10]++;
+
+            printCount(count);
+
+            // count[] 배열의 누적값을 만든다
+            for (int i = 1; i < 10; i++)
+                count[i] += count[i - 1];
+
+            printCount(count);
+
+            //output[]에 정렬된 값으로 복사
+            //뒤에서부터 하는 이유는 앞에서 정렬된 순서를 유지하기 위함
+            for(int i=N-1;i>=0;i--)
+            {
+                int pos = count[(a[i] / exp) % 10] - 1; //인덱스
+                output[pos] = a[i];
+                count[(a[i] / exp) % 10]--;
+            }
+            //output[]을 원래의 a[]에 복사
+            for (int i = 0; i < N; i++)
+                a[i] = output[i];
+
+            Console.WriteLine("{0}번째 자리 정렬", exp);
+            PrintArray();
+        }
+
+        private static void printCount(int[] count)
+        {
+            for (int i = 0; i < 10; i++)
+                Console.Write(count[i] + " ");
+            Console.WriteLine();
+        }
+
+        private static int GetMax()
+        {
+            int max = a[0];
+            for (int i = 1; i < N; i++)
+                if (a[i] > max)
+                    max = a[i];
+            return max;
         }
     }
 }
